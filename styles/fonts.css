@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/*Fonts Collection*/
+
+/* Chivo Mono
+  font-family:   font-family: "Chivo Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Noto Sans Mono
+  font-family: "Noto Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+
+:root{
+    --main:"Chivo Mono", monospace;
+    --alt:"Noto Sans Mono", monospace;
+
+}

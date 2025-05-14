@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/* Collection of Stylings for Main*/
+
+@import url(colors.css);
+
+@import url(fonts.css);
+
+@import url(main.css);
+
+@import url(footer.css);

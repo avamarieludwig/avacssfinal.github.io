@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/* Stylings for Index HTML */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--main);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+   cursor: url('../cursors/c1.cur') , auto;
+}
+
+.cylinder {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  transform-style: preserve-3d;
+  animation: spin 20s linear infinite;
+  transform: rotateX(20deg);
+}
+
+.text-cylinder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.text-cylinder span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 3.25rem;
+  font-weight: bold;
+  transform: rotateY(calc(var(--i) * 6.67deg)) translateZ(250px);
+  transform-origin: center center;
+  animation: rainbow 4s linear infinite;
+  white-space: pre;
+}
+.enter-button::before {
+  content: '';
+  position: absolute;
+  top: -2rem;
+  bottom: -2rem;
+  left: -2rem;
+  right: -2rem;
+  z-index: -1;
+}
+.enter-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: url('../cursors/c2.cur') , auto;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.enter-button:hover {
+  background: var(--black);
+  box-shadow: 0 0 20px var(--white);
+  color: var(--white);
+  
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(20deg) rotateY(360deg);
+  }
+  to {
+    transform: rotateX(20deg) rotateY(0deg);
+  }
+}
+
+
+@keyframes rainbow {
+  0% { color: var(--red); }
+  16% { color: var(--orange); }
+  33% { color: var(--yellow); }
+  50% { color: var(--green); }
+  66% { color: var(--blue); }
+  83% { color: var(--purple); }
+  100% { color: var(--red); }
+}
+
+@media (max-width: 600px) {
+  .cylinder {
+    width: 300px;
+    height: 300px;
+  }
+
+  .text-cylinder span {
+    font-size: 1rem;
+  }
+
+  .enter-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+    font-family:var(--alt);
+}

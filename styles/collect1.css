@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/* Collection of Stylings for Index*/
+
+@import url(colors.css);
+
+@import url(fonts.css);
+
+@import url(styles.css);
+
+@import url(footer.css);
